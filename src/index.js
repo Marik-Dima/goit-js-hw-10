@@ -72,7 +72,7 @@ const populateCountryHtml = debounce(event => {
     
 
 // фетцч функція запиту та виводу інформації про країну
-  fetchCountries(event.target.value)
+  fetchCountries(searchString)
     .then(data => {
       if (data.length > 10) {
         Notify.info('Too many matches found. Please enter a more specific name.');
